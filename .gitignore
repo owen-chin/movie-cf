@@ -1,0 +1,36 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+.virtual_documents/
+
+# MyPy cache
+.mypy_cache/
+
+# VS Code settings
+.vscode/
+
+# Data files
+data/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+
+# Python Package Index (PyPI) artifacts
+*.egg-info/
+dist/
+build/
+
+# Ignore system files
+Thumbs.db
