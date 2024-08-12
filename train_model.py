@@ -16,9 +16,6 @@ movie_path = os.path.join(script_dir, "data/ml-latest-small/movies.csv")
 rating_path = os.path.join(script_dir, "data/ml-latest-small/ratings.csv")
 test_ratings_path = os.path.join(script_dir, "data/ml-latest-small/test_ratings.csv")
 
-print(f"Movie path: {movie_path}")
-print(f"Rating path: {rating_path}")
-
 MODEL_PATH = os.path.join(script_dir, "models/saved_model.pth")
 BATCH_SIZE = 32
 EPOCHS = 2

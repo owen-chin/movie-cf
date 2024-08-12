@@ -42,14 +42,15 @@ valid_loader = DataLoader(dataset=valid_dataset,
 
 # Initialize device and model
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+
 recommendation_model = RecSysModel(
-    n_users=len(user_encoder.classes_),
-    n_movies=len(movie_encoder.classes_),
+    n_users=ratings_df.userId.nunique(),
+    n_movies=ratings_df.movieId.nunique(),
     embedding_size=64,
     hidden_dim=128,
     dropout_rate=0.1
 )
-recommendation_model.load_state_dict(torch.load(MODEL_PATH))
+recommendation_model.load_state_dict(torch.load(MODEL_PATH, weights_only=True))
 recommendation_model.to(device)
 
 def calculate_precision_recall(user_ratings, k, threshold):

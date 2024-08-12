@@ -11,11 +11,16 @@
         <input type="text" id="user_id" name="user_id">
         <button type="submit">Get Recommendations</button>
     </form>
-    {% if recommendations %}
+    {% if recommendations_titles %}
         <h2>Recommendations:</h2>
         <ul>
-            {% for movie in recommendations %}
+            {% for movie in recommendations_titles %}
                 <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for id in recommendations %}
+                <li>{{ id }}</li>
             {% endfor %}
         </ul>
     {% endif %}
